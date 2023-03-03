@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML5 Multimedia video</title>
+  </head>
+  <body>
+    <h1>video요소를 이용한 동영상 삽입</h1>
+    <video style="width: 576px; height: 360" controls autoplay loop>
+      <source src="/videos/2022-12-29 18-41-21.mp4" type="video/mp4" />
+      <track
+        kind="subtitles"
+        src="sample_subtitle_en.vtt"
+        srclang="en"
+        label="English"
+      />
+      <track
+        kind="subtitles"
+        src="sample_subtitle_ko.vtt"
+        srclang="ko"
+        label="Korean"
+      />
+      이 문장은 사용자의 웹 브라우저가 video 요소를 지원하지 않을 때 나타납니다.
+    </video>
+  </body>
+</html>

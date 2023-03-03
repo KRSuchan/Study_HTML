@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drawing Line</title>
+  </head>
+  <body>
+    <h1>선 그리기를 이용한 도형 만들기</h1>
+    <canvas
+      id="drawCanvas"
+      width="300px"
+      height="1000px"
+      style="border: 1px solid #993300"
+    >
+      이 문장은 사용자의 웹 브라우저가 canvas 요소를 지원하지 않을 때
+      나타납니다.</canvas
+    >
+    <!-- Canvas 영역 만들기 -->
+    <script>
+      var paper = document.getElementById("drawCanvas");
+      var context = paper.getContext("2d");
+    </script>
+
+    <!-- 삼각형 그리기 -->
+    <script>
+      context.moveTo(0, 0);
+      context.lineTo(300, 200);
+      context.lineTo(150, 0);
+      context.lineTo(0, 0);
+      context.fillStyle = "#0099FF";
+      context.fill();
+      context.stroke();
+    </script>
+
+    <!-- 원 그리기 -->
+    <script>
+      context.beginPath();
+      context.moveTo(100, 300);
+      context.arc(100, 300, 120, 0, (45 * Math.PI) / 180);
+      context.closePath();
+      context.stroke();
+    </script>
+
+    <!-- 텍스트 그리기기 -->
+    <script>
+      context.font = "40px Arial";
+      context.fillText("CANVAS", 50, 500);
+      context.strokeText("HTML5", 80, 550);
+    </script>
+
+    <!-- gradient 그리기 -->
+    <script>
+      var gradient = context.createRadialGradient(100, 100, 150, 150, 150, 30);
+      gradient.addColorStop(0, "black");
+      gradient.addColorStop(1, "white");
+      context.fillStyle = gradient;
+      context.fillRect(0, 0, 300, 300);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Plugins</title>
+  </head>
+  <body>
+    <h1>object 요소를 이용한 pdf 파일 삽입</h1>
+    <object
+      data="/media/zoom_to_rect.pdf"
+      style="width: 100%; height: 700px"
+    ></object
+    ><br /><br />
+    <object data="/images/구름.jpg" style="width: 100%; height: 700px"></object>
+    <br /><br />
+    <h1>embed 요소를 이용한 pdf 파일 삽입</h1>
+    <embed src="/media/zoom_to_rect.pdf" style="width: 100%; height: 700px" />
+  </body>
+</html>
+<!-- 둘의 차이는 embed가 html의 표준이 되는게 늦었다는 것 뿐, 사용의 차이는 없다. -->
