@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Links</title>
+    <style>
+      .style1:link,
+      .style1:visited {
+        background-color: #ffffe0;
+        color: darkslategray;
+        font-size: 1.3em;
+        text-decoration: none;
+      }
+      .style2:link,
+      a:visited {
+        background-color: #ffa500;
+        color: maroon;
+        padding: 15px 25px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+      }
+
+      .style2:hover,
+      .style2:active {
+        background-color: #ff4500;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>링크의 스타일 설정</h1>
+    <p><a class="style1" href="/STUDY_HTML/HTML_TEST.html">홈으로 가기</a></p>
+    <h1>버튼에 링크 달기</h1>
+    <button onclick="location.href='/STUDY_HTML/HTML_TEST.html'" type="button">
+      홈으로 가기
+    </button>
+    <h1>링크를 활용한 버튼</h1>
+    <p>
+      <a class="style2" href="/STUDY_HTML/HTML_TEST.html" target="_blank"
+        >홈으로 가기</a
+      >
+    </p>
+  </body>
+</html>
