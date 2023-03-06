@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>border 속성을 이용한 table css</title>
+    <style>
+      table,
+      th,
+      td {
+        border: 2px solid black;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+      }
+      th {
+        vertical-align: top;
+        height: 50px;
+      }
+      td {
+        vertical-align: bottom;
+        height: 50px;
+      }
+      th:hover,
+      td:hover {
+        background-color: #f5f;
+      }
+      tr:nth-child(odd) {
+        background-color: grey;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>table css</h1>
+    <table>
+      <tr>
+        <th>참치</th>
+        <th>고래</th>
+        <th>상어</th>
+      </tr>
+      <tr>
+        <td>날치</td>
+        <td>문어</td>
+        <td>꽁치</td>
+      </tr>
+      <tr>
+        <td>오징어</td>
+        <td>고등어</td>
+        <td>돌고래</td>
+      </tr>
+    </table>
+  </body>
+</html>
