@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>webStorage 테스트</title>
+  </head>
+  <body>
+    <h1>sessionStorgae 객체를 이용한 데이터의 저장</h1>
+    <div id="counter"></div>
+    <p><button onclick="clickCounter()" type="button">카운터 증가</button></p>
+    <p>브라우저 탭이나 창을 닫으면 카운터의 횟수는 초기화</p>
+    <p>하지만 결과보기를 누르거나 F5를 누르면 초기화되지 않음</p>
+
+    <script>
+      function clickCounter() {
+        if (typeof Storage !== "undefined") {
+          if (sessionStorage.clickCount) {
+            sessionStorage.clickCount = Number(sessionStorage.clickCount) + 1;
+          } else {
+            sessionStorage.clickCount = 1;
+          }
+          document.getElementById("counter").innerHTML =
+            "카운터의 현재 횟수는 " + sessionStorage.clickCount + "입니다.";
+        } else {
+          document.getElementById("counter").innerHTML =
+            "카운터의 현재 횟수는 " + sessionStorage.clickCount + "입니다.";
+        }
+      }
+    </script>
+  </body>
+</html>

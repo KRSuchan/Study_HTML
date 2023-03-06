@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML5 API Web Worker</title>
+  </head>
+  <body>
+    <h1>web worker를 이용한 동시 작업</h1>
+
+    <p>현재까지 발견한 소수의 개수는 <output id="result"></output>입니다.</p>
+    <button onclick="startWorker()">Web Worker 시작</button>
+    <button onclick="stopWorker()">Web Worker 종료</button>
+    <p>
+      위의 스크립트가 실행되는 동안에도 텍스트 필드에 글을 쓰는 작업을 동시에 할
+      수 있습니다.
+    </p>
+    <textarea scols="10" rows="50"></textarea>
+    <script>
+      var webworker;
+
+      function startWorker() {
+        if (typeof Worker !== "undefined") {
+          webworker = new Worker("/");
+        } else {
+        }
+      }
+    </script>
+  </body>
+</html>
