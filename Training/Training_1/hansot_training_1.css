@@ -1,0 +1,48 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.hd_content {
+  height: 90px;
+  border: 1px solid black;
+}
+.logo,
+.gnb_menu,
+ul,
+li {
+  display: inline-block;
+  height: 90px;
+}
+.logo {
+  vertical-align: top;
+  margin-left: 50px;
+  margin-right: 100px;
+  border: 1px solid black;
+}
+.dp1 {
+  height: 90px;
+  width: 100px;
+  border: 1px solid black;
+  text-align: center;
+}
+.logo,
+ul > li {
+  float: left;
+}
+.logo a {
+  line-height: 90px;
+  color: black;
+  text-decoration-line: none;
+}
+.dp1_tit a {
+  display: inline-block;
+  width: 100px;
+  height: 90px;
+  line-height: 90px;
+  color: black;
+  text-decoration-line: none;
+}
+.dp1_tit a:hover {
+  color: #f6ca00;
+}
