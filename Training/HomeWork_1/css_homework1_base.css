@@ -1,6 +1,11 @@
 * {
   box-sizing: border-box;
   border: 1px solid black;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image: url("/Training/HomeWork_1/img/main-visual01.jpg");
 }
 header,
 .logo,
@@ -8,14 +13,20 @@ header,
   display: flex;
   align-items: center;
 }
+.logo,
 nav {
-  width: 1000px;
-}
-.logo {
   justify-content: center;
   text-align: center;
   align-items: center;
   line-height: 6.375rem;
+}
+nav,
+nav > .dp1 {
+  display: flex;
+  width: 1000px;
+}
+nav > .dp1 > li:nth-child(n) {
+  flex-grow: 1;
 }
 header {
   background-color: #ff8d3f;
@@ -24,7 +35,7 @@ header {
 }
 .dp1 > li > .dp2 {
   display: none;
-  background-color: aqua;
+  background-color: #17a2b8;
   position: absolute;
   top: 100%;
   white-space: nowrap;
@@ -46,4 +57,14 @@ a {
 }
 .dp1 {
   height: 5rem;
+}
+.logo > strong,
+a {
+  color: white;
+}
+.type01,
+.type02,
+.type03,
+.text-box {
+  color: white;
 }
