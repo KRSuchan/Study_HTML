@@ -4,6 +4,29 @@
   box-sizing: border-box;
   border: 1px solid lightpink;
 }
+.check_find_in {
+  width: 570px;
+  height: 450px;
+  box-sizing: border-box;
+  border-bottom: 6px solid #373737;
+  position: relative;
+}
+.check_menu_content {
+  font-size: 20px;
+}
+.check_menu_img img {
+  width: 100%;
+}
+.check_find_out,
+.franchises,
+.philosophy_out {
+  margin-top: 60px;
+}
+.home_1 .check_menu .check_menu_img {
+  width: 570px;
+  height: 524px;
+  box-sizing: border-box;
+}
 span.sc_txt {
   background: url(./img/btn_link.png) left top no-repeat;
   background-size: 40px 20px;
