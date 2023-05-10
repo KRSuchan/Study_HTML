@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  /* border: 1px solid black; */
 }
 body {
   font-family: Verdana, sans-serif;
@@ -21,7 +22,7 @@ img {
 
 /* Slideshow container */
 .slideshow-container {
-  max-width: 1000px;
+  max-width: 950px;
   width: 510px;
   height: 500px;
   position: relative;
@@ -78,21 +79,24 @@ img {
   top: 0;
 }
 
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
+/* The item_imgs */
+.item_img {
+  height: 50px;
+  width: 50px;
   margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
   display: inline-block;
+  border: 1px solid black;
   transition: background-color 0.6s ease;
 }
 
-.active,
-.dot:hover {
-  background-color: #717171;
+.item_img > img {
+  height: 100%;
+  width: auto;
+  max-width: 100%;
+}
+
+.active {
+  border: 3px solid black;
 }
 
 /* Fading animation */
