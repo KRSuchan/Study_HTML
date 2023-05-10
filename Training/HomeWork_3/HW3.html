@@ -11,53 +11,47 @@
   <body>
     <div class="item_info_top">
       <div class="carousel">
-        <div class="slideshow-container">
-          <div class="mySlides fade">
-            <img src="./img/img1.jpg" style="width: 100%" />
+        <div id="slide_con" class="slideshow-container">
+          <div id="slide_top" class="slideshow-top">
+            <!-- 물건 카루셀 상단 이미지 영역 -->
+            <!-- 
+            <div class="mySlides fade">
+              <img src="item_imgs[n]" style="width:100%" />
+            </div>
+           -->
           </div>
-
-          <div class="mySlides fade">
-            <img src="./img/img2.jpg" style="width: 100%" />
+          <div id="prev_next_btns" class="prev_next_btns">
+            <a class="prev" id="prev_btn" onclick="plusSlides(-1)">◀️</a>
+            <a class="next" id="next_btn" onclick="plusSlides(1)">▶️</a>
           </div>
-
-          <div class="mySlides fade">
-            <div class="numbertext">3 / 3</div>
-            <img src="./img/img3.jpg" style="width: 100%" />
-          </div>
-
-          <a class="prev" onclick="plusSlides(-1)"><</a>
-          <a class="next" onclick="plusSlides(1)">></a>
         </div>
         <br />
 
-        <div style="text-align: center">
-          <span class="item_img" onmouseover="currentSlide(1)">
-            <img src="./img/img1.jpg" />
-          </span>
-          <span class="item_img" onmouseover="currentSlide(2)">
-            <img src="./img/img2.jpg" />
-          </span>
-          <span class="item_img" onmouseover="currentSlide(3)">
-            <img src="./img/img3.jpg" />
-          </span>
+        <div id="currentImg" style="text-align: center">
+          <!-- ITEM 카루셀 하단 이미지 영역 -->
+          <!-- 
+            <span class="item_img" onmouseover="currentSlide(n)">
+              <img src="item_imgs[n]" />
+            </span>
+           -->
         </div>
       </div>
       <div class="purchase_area">
         <div class="title">
           <div class="item_title">
-            <h3 class="item_name">
-              2023 코베아 네스트W/이너텐트 루프플라이 그라운드시트 포함
+            <h3 id="item_name">
+              <!-- ITEM_NAME 영역  -->
             </h3>
           </div>
           <div class="price">
             <strong class="item_price">
-              <span class="price">730,000</span>
+              <span id="price"></span>
               <span class="won">원</span>
             </strong>
           </div>
         </div>
         <div class="option">
-          <h1>option area</h1>
+          <a href="#" role="button" class="option_button">컬러</a>
         </div>
         <div class="purchase_button">
           <h1>purchase area</h1>
