@@ -1,4 +1,4 @@
-const item = {
+const itemInfo = {
   name: "2023 코베아 네스트W/이너텐트 루프플라이 그라운드시트 포함",
   price: "730,000",
   imgs: [
@@ -10,15 +10,17 @@ const item = {
     "./img/img6.jpg",
     "./img/img7.jpg",
   ],
-  option_name: ["컬러"],
-  options: ["카키", "브라운", "탄", "아이보리", "블랙"],
 };
-
-const item_name = item.name;
-const item_price = item.price;
-const item_imgs = [...item.imgs];
-const option_name = [...item.option_name];
-const options = [...item.option_name];
+const itemOption = {
+  option_name: "컬러",
+  option_items: ["카키", "브라운", "탄", "아이보리", "블랙"],
+};
+const item_name = itemInfo.name;
+const item_price = itemInfo.price;
+const price = uncomma(item_price);
+const item_imgs = [...itemInfo.imgs];
+const option_name = itemOption.option_name;
+const option_contents = [...itemOption.option_items];
 
 let slideIndex = 1;
 
@@ -27,7 +29,91 @@ setCurrentImgs(item_imgs);
 showSlides(slideIndex);
 setItemName(item_name);
 setItemPrice(item_price);
+setOptionBtn(option_name);
+setOptionContentsBtns(option_contents);
+showOptionContents();
 
+let plus = document.querySelector(".plus");
+let minus = document.querySelector(".minus");
+let result = document.querySelector("#result");
+let totalcost = document.querySelector(".totalcost");
+let i = 1;
+
+plus.addEventListener("click", () => {
+  i++;
+  result.textContent = i;
+  let totalcostNum = i * price;
+  totalcost.textContent = "원" + totalcostNum.toLocaleString();
+});
+
+minus.addEventListener("click", () => {
+  if (i > 0) {
+    i--;
+    result.textContent = i;
+    let totalcostNum = i * price;
+    totalcost.textContent = "원" + totalcostNum.toLocaleString();
+  } else {
+    totalcost.textContent = "원" + 0;
+  }
+});
+
+function uncomma(str) {
+  str = "" + str.replace(/,/gi, "");
+  str = str.replace(/(^\s*)|(\s*$)/g, "");
+
+  return new Number(str); //문자열을 숫자로 반환
+}
+
+function showOptionContents() {
+  let option = document.getElementById("options");
+  let ul = document.getElementById("option_ul");
+
+  option.addEventListener("click", function () {
+    if (ul.style.display == "block") {
+      ul.style.display = "none";
+    } else {
+      ul.style.display = "block";
+    }
+  });
+}
+function setOptionContentsBtns(option_contents) {
+  // parent
+  let option = document.getElementById("options");
+
+  let ul = document.createElement("ul");
+  ul.setAttribute("class", "option_ul option_hide");
+  ul.setAttribute("id", "option_ul");
+  option.appendChild(ul);
+
+  let opt_ul = document.getElementById("option_ul");
+
+  for (let i = 0; i < option_contents.length; i++) {
+    var li = document.createElement("li");
+    li.setAttribute("id", `option_li${i}`);
+    li.setAttribute("class", "option_li");
+
+    var a = document.createElement("a");
+    a.setAttribute("href", "#");
+    a.setAttribute("class", "option_a");
+    a.role = "option";
+    a.textContent = option_contents[i];
+
+    li.appendChild(a);
+    opt_ul.appendChild(li);
+  }
+}
+function setOptionBtn(option_name) {
+  // parent
+  var div_options = document.getElementById("options");
+
+  // child
+  var btn_option = document.createElement("button");
+  btn_option.setAttribute("class", "option_btn");
+  btn_option.setAttribute("id", "option_btn");
+  btn_option.textContent = option_name;
+
+  div_options.appendChild(btn_option);
+}
 function setCarouselImgs(item_imgs) {
   for (let i = 0; i < item_imgs.length; i++) {
     // parent
@@ -102,5 +188,6 @@ function setItemName(name) {
 
 function setItemPrice(price) {
   var id_item_price = document.getElementById("price");
+  id_item_price.style.fontSize = "30px";
   id_item_price.textContent = price;
 }
