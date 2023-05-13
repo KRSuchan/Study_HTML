@@ -10,7 +10,6 @@ const itemInfo = {
     "./img/img5.jpg",
     "./img/img6.jpg",
     "./img/img7.jpg",
-    "./img/img8.jpg",
   ],
 };
 const itemOption = {
